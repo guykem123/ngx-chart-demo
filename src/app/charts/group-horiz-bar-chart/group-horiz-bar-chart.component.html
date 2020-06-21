@@ -1,0 +1,7 @@
+<ngx-charts-bar-horizontal-2d [results]="data | async" [xAxis]="chartData.xAxis" [yAxis]="chartData.yAxis"
+    [scheme]="chartData.colorScheme" [legend]="chartData.showLegend" [view]="chartData.chartSize"
+    [barPadding]="chartData.barPadding" [groupPadding]="chartData.groupPadding"
+    [legendPosition]="chartData.legendPosition" [legendTitle]="chartData.legendTitle"
+    [showGridLines]="chartData.showGridLines" [xAxis]="chartData.xAxis" [yAxis]="chartData.yAxis"
+    [roundDomains]="chartData.roundDomains" [noBarWhenZero]="chartData.noBarWhenZero" (select)="onSelect($event)">
+</ngx-charts-bar-horizontal-2d>

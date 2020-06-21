@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.mat-icon.mat-icon-logo {
+    position: relative;
+    top: -4px;
+}
+.td-search-box .td-search-icon.mat-icon-button {
+    margin: 0;
+    height: 30px;
+}
+.td-search-box .td-search-icon.mat-icon-button .mat-icon {
+    margin-top: -10px;
+}
+.td-search-box td-search-input {
+    margin-left: 0 !important;
+    margin-bottom: 5px;
+}
+.td-search-box td-search-input .mat-form-field {
+    width: auto;
+}
+.td-search-box td-search-input .mat-form-field-wrapper {
+    padding-bottom: 0;
+}
+.td-search-box td-search-input .mat-input-infix {
+    padding: 0;
+}
+.td-search-box td-search-input .mat-form-field-infix {
+    border-top: 0;
+}

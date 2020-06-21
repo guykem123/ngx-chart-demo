@@ -1,0 +1,21 @@
+<div id="grid-view">
+    <h3 id="title">
+        <span id="title-text">
+            {{title}}
+        </span>
+    </h3>
+    <div id="vert-bar">
+        <app-stacked-vert-bar-chart [chartData]='vartChartData' [data]="vartData"></app-stacked-vert-bar-chart>
+    </div>
+    <div id="horiz-bar">
+        <app-group-horiz-bar-chart [chartData]='horizChartData' [data]="horizData"></app-group-horiz-bar-chart>
+    </div>
+    <div id="amount">
+        <span id="amount-text">
+            $ {{amount}}
+            <span [ngClass]=" isPercentagePositive ? 'percentage-green' :'percentage-red'">
+                {{percentage}}%
+            </span>
+        </span>
+    </div>
+</div>

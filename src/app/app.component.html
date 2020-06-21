@@ -1,0 +1,14 @@
+<div id="grid-view">
+  <app-card id="vert-bar">
+    <app-stacked-vert-bar-chart [chartData]='stackBarChartData' [data]="stackBarData"></app-stacked-vert-bar-chart>
+  </app-card>
+  <app-card id="horiz-bar">
+    <app-group-horiz-bar-chart [chartData]='groupBarChartData' [data]="groupBarData"></app-group-horiz-bar-chart>
+  </app-card>
+  <app-card id="area-chart">
+    <app-stacked-area-chart [chartData]='stackAreaChartData' [data]="stackAreaData"></app-stacked-area-chart>
+  </app-card>
+  <app-card id="multi-data-chart">
+    <app-multi-data-chart [chartsData]="chartsData"></app-multi-data-chart>
+  </app-card>
+</div>

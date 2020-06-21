@@ -1,0 +1,29 @@
+#grid-view{
+    display: grid;
+    grid-template-columns: 30% 15% 10% 45%;
+    box-shadow: 0 2px 2px -2px gray;
+}
+#title{
+  text-align: center;
+  margin: 5px;
+}
+#title-text{
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+}
+#amount{
+  text-align: center;
+  margin: 7px;
+}
+#amount-text{
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+}
+.percentage-green{
+    color: green;
+}
+.percentage-red{
+    color: red;
+}
