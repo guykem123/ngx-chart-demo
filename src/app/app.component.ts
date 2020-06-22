@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NgxGroupBarChart, NgxStackChart } from './models/ngxChart';
+import { NgxGroupBarChart, NgxStackChart, NgxVerBarChart } from './models/ngxChart';
 import { BehaviorSubject } from 'rxjs';
 import { NgxValue, DataService } from './services/dataService/data.service';
 import { DataChart } from './models/dataChart';
@@ -13,7 +13,7 @@ import { LegendPosition } from './models/legendPosition';
 export class AppComponent {
   groupBarChartData: NgxGroupBarChart = new NgxGroupBarChart()
   groupBarData: BehaviorSubject<NgxValue[]>
-  stackBarChartData: NgxStackChart = new NgxStackChart()
+  stackBarChartData: NgxVerBarChart = new NgxVerBarChart()
   stackBarData: BehaviorSubject<NgxValue[]>
 
   stackAreaChartData: NgxStackChart = new NgxStackChart()

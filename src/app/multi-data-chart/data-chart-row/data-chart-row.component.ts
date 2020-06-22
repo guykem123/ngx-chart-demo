@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { NgxValue } from 'src/app/services/dataService/data.service';
-import { NgxGroupBarChart, NgxStackChart } from 'src/app/models/ngxChart';
+import { NgxGroupBarChart, NgxStackChart, NgxVerBarChart } from 'src/app/models/ngxChart';
 import { DataChart } from 'src/app/models/dataChart';
 
 @Component({
@@ -19,21 +19,11 @@ export class DataChartRowComponent implements OnInit {
   amount: number
   percentage: number
   isPercentagePositive: boolean
-  horizChartData: NgxGroupBarChart = new NgxGroupBarChart()
-  vartChartData: NgxStackChart = new NgxStackChart()
+  vartChartData: NgxVerBarChart = new NgxVerBarChart()
   constructor() {
     this.vartChartData = {
       ...this.vartChartData,
-      colorScheme: {
-        domain: ['#040404']
-      }
-    }
-    this.horizChartData = {
-      ...this.horizChartData,
-      showGridLines: false,
-      barPadding: 0,
-      groupPadding: 0,
-
+      barPadding:2,
       colorScheme: {
         domain: ['#040404']
       }

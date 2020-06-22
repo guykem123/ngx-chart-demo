@@ -3,7 +3,7 @@ import { NgxValue } from 'src/app/services/dataService/data.service';
 import { ChartService } from 'src/app/services/chartService/chart.service';
 import { DatePipe } from '@angular/common';
 import { NgxChartSelectData } from 'src/app/models/stackedAreaSelectData';
-import { NgxStackChart } from 'src/app/models/ngxChart';
+import { NgxStackChart, NgxVerBarChart } from 'src/app/models/ngxChart';
 import { BehaviorSubject, Subject } from 'rxjs';
 import { LegendPosition } from 'src/app/models/legendPosition';
 
@@ -15,7 +15,7 @@ import { LegendPosition } from 'src/app/models/legendPosition';
 })
 export class StackedVertBarChartComponent implements OnInit {
 
-  @Input() chartData: NgxStackChart
+  @Input() chartData: NgxVerBarChart
   @Input() data: BehaviorSubject<NgxValue[]>
   @Input() parent: HTMLElement;
   @Input() canSelect: boolean

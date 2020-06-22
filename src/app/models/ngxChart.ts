@@ -71,3 +71,28 @@ export class NgxStackChart implements NgxChart {
         this.legendTitle = "Legend"
     }
 }
+
+export class NgxVerBarChart implements NgxChart {
+    colorScheme: any;
+    legendPosition: LegendPosition;
+    legendTitle: string;
+    showGridLines: boolean;
+    roundDomains: boolean;
+    xAxis: boolean;
+    yAxis: boolean;
+    showLegend: boolean;
+    barPadding: number
+    constructor() {
+        this.xAxis = false
+        this.yAxis = false
+        this.showLegend = false
+        this.showGridLines = true
+        this.roundDomains = false
+        this.colorScheme = {
+            domain: ['#5AA454', '#E44D25', '#CFC0BB', '#7aa3e5', '#a8385d', '#aae3f5']
+        };
+        this.legendPosition = LegendPosition.Below
+        this.legendTitle = "Legend"
+        this.barPadding = 8;
+    }
+}

@@ -1,5 +1,5 @@
 <ngx-charts-bar-vertical-stacked [results]="data | async" [xAxis]="chartData.xAxis" [yAxis]="chartData.yAxis"
-    [scheme]="chartData.colorScheme" [legend]="chartData.showLegend" [view]="view$ | async"
+    [scheme]="chartData.colorScheme" [legend]="chartData.showLegend" [view]="view$ | async" [barPadding]="chartData.barPadding"
     [legendPosition]="chartData.legendPosition" [legendTitle]="chartData.legendTitle"
     [showGridLines]="chartData.showGridLines" [roundDomains]="chartData.roundDomains" (select)="onSelect($event)">
 </ngx-charts-bar-vertical-stacked>
