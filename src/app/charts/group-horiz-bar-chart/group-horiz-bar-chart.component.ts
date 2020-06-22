@@ -27,7 +27,6 @@ export class GroupHorizBarChartComponent implements OnInit {
 
   ngOnInit(): void {
     let { parentWidth, parentHeight } = this.chartService.GetWidthAndHeight(this.chartData, this.parent);
-    console.log(parentWidth, parentHeight)
     this.view$.value.unshift(parentWidth, parentHeight)
   }
 
