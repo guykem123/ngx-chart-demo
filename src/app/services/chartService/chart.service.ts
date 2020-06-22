@@ -3,6 +3,8 @@ import { isString } from 'util';
 import { NgxValue } from '../dataService/data.service';
 import { NgxChartSelectData } from 'src/app/models/stackedAreaSelectData';
 import { BehaviorSubject } from 'rxjs';
+import { LegendPosition } from 'src/app/models/legendPosition';
+import { NgxChart } from 'src/app/models/ngxChart';
 
 @Injectable({
   providedIn: 'root'
@@ -32,7 +34,7 @@ export class ChartService {
       data.next(this.data)
     }
     else {
-      if (this.data.find(data => data.name == (<NgxChartSelectData>value).series)) {
+      if (this.data.find(data => data.name == filterByName)) {
         const newData = this.data.filter(data => data.name == filterByName)
         data.next(newData)
       }
@@ -46,5 +48,14 @@ export class ChartService {
     }
 
     this.isDataFiltered = !this.isDataFiltered
+  }
+
+  GetWidthAndHeight(chartData: NgxChart, parent: HTMLElement) {
+    let parentHeight = (chartData.showLegend
+      && chartData.legendPosition == LegendPosition.Below) ?
+      parent.clientHeight - 60 :
+      parent.clientHeight;
+    let parentWidth = parent.clientWidth;
+    return { parentWidth, parentHeight };
   }
 }

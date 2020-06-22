@@ -1,10 +1,11 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, AfterViewInit, HostListener } from '@angular/core';
 import { NgxValue } from 'src/app/services/dataService/data.service';
 import { ChartService } from 'src/app/services/chartService/chart.service';
 import { DatePipe } from '@angular/common';
 import { NgxChartSelectData } from 'src/app/models/stackedAreaSelectData';
 import { NgxStackChart } from 'src/app/models/ngxChart';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Subject } from 'rxjs';
+import { LegendPosition } from 'src/app/models/legendPosition';
 
 @Component({
   selector: 'app-stacked-vert-bar-chart',
@@ -16,12 +17,23 @@ export class StackedVertBarChartComponent implements OnInit {
 
   @Input() chartData: NgxStackChart
   @Input() data: BehaviorSubject<NgxValue[]>
+  @Input() parent: HTMLElement;
+  @Input() canSelect: boolean
+  view$: BehaviorSubject<number[]>
 
   constructor(private chartService: ChartService) {
-
+    this.view$ = new BehaviorSubject<number[]>([])
   }
 
   ngOnInit(): void {
+    let { parentWidth, parentHeight } = this.chartService.GetWidthAndHeight(this.chartData, this.parent);
+    this.view$.value.unshift(parentWidth, parentHeight)
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    let { parentWidth, parentHeight } = this.chartService.GetWidthAndHeight(this.chartData, this.parent);
+    this.view$.next([parentWidth, parentHeight])
   }
 
   axisDate(val: string): string {
@@ -29,6 +41,7 @@ export class StackedVertBarChartComponent implements OnInit {
   }
 
   onSelect(value: NgxChartSelectData | string) {
-    this.chartService.onSelect(value, this.data)
+    if (this.canSelect)
+      this.chartService.onSelect(value, this.data)
   }
 }

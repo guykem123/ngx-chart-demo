@@ -3,6 +3,7 @@ import { NgxGroupBarChart, NgxStackChart } from './models/ngxChart';
 import { BehaviorSubject } from 'rxjs';
 import { NgxValue, DataService } from './services/dataService/data.service';
 import { DataChart } from './models/dataChart';
+import { LegendPosition } from './models/legendPosition';
 
 @Component({
   selector: 'app-root',
@@ -31,7 +32,6 @@ export class AppComponent {
       xAxis: true,
       yAxis: true,
       showLegend: true,
-      chartSize: [300, 200],
     };
   }
 
@@ -41,7 +41,6 @@ export class AppComponent {
       ...this.stackBarChartData,
       xAxis: true,
       yAxis: true,
-      chartSize: [900, 200],
       showLegend: true
     };
   }
@@ -55,7 +54,8 @@ export class AppComponent {
       xAxis: true,
       yAxis: true,
       showLegend: true,
-      chartSize: [300, 200],
+      showDataLabel:true,
+      roundDomains:true,
     }
   }
 
@@ -64,50 +64,29 @@ export class AppComponent {
       title: "compute",
       amount: 131571,
       vartData: this.dataService.GetDataComputeVert(),
-      horizData: this.dataService.GetDataComputeHoriz(),
+      horizData: 100,
       percentage: 7
     },
     {
       title: "compute",
       amount: 131571,
       vartData: this.dataService.GetDataComputeVert(),
-      horizData: this.dataService.GetDataComputeHoriz(),
+      horizData: 89,
       percentage: 7
     },
     {
-      title: "compute",
-      amount: 131571,
-      vartData: this.dataService.GetDataComputeVert(),
-      horizData: this.dataService.GetDataComputeHoriz(),
-      percentage: 7
+      title: "desktop",
+      amount: 123571,
+      vartData: this.dataService.GetDataDesktopVert(),
+      horizData: 63,
+      percentage: 10
     },
     {
-      title: "compute",
-      amount: 131571,
-      vartData: this.dataService.GetDataComputeVert(),
-      horizData: this.dataService.GetDataComputeHoriz(),
-      percentage: 7
+      title: "desktop",
+      amount: 154571,
+      vartData: this.dataService.GetDataDesktopVert(),
+      horizData: 36,
+      percentage: -1
     },
-    {
-      title: "compute",
-      amount: 131571,
-      vartData: this.dataService.GetDataComputeVert(),
-      horizData: this.dataService.GetDataComputeHoriz(),
-      percentage: 7
-    },
-    {
-      title: "compute",
-      amount: 131571,
-      vartData: this.dataService.GetDataComputeVert(),
-      horizData: this.dataService.GetDataComputeHoriz(),
-      percentage: 7
-    },
-    {
-      title: "compute",
-      amount: 131571,
-      vartData: this.dataService.GetDataComputeVert(),
-      horizData: this.dataService.GetDataComputeHoriz(),
-      percentage: -7
-    }
   ]
 }

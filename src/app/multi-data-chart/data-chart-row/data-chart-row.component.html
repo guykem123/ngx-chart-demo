@@ -1,14 +1,18 @@
 <div id="grid-view">
-    <h3 id="title">
+    <h6 id="title">
         <span id="title-text">
             {{title}}
         </span>
-    </h3>
-    <div id="vert-bar">
-        <app-stacked-vert-bar-chart [chartData]='vartChartData' [data]="vartData"></app-stacked-vert-bar-chart>
+    </h6>
+    <div>
+        <div id="vert-bar" #parentVert>
+            <app-stacked-vert-bar-chart [parent]="parentVert" [chartData]='vartChartData' [data]="vartData">
+            </app-stacked-vert-bar-chart>
+        </div>
     </div>
-    <div id="horiz-bar">
-        <app-group-horiz-bar-chart [chartData]='horizChartData' [data]="horizData"></app-group-horiz-bar-chart>
+    <div class="line-of-progress">
+        <div class="line" [style.width]="width">
+        </div>
     </div>
     <div id="amount">
         <span id="amount-text">

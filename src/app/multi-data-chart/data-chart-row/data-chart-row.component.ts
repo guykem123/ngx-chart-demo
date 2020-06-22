@@ -11,6 +11,7 @@ import { DataChart } from 'src/app/models/dataChart';
 })
 export class DataChartRowComponent implements OnInit {
 
+  width: string
   @Input() data: DataChart;
   title: string
   vartData: BehaviorSubject<NgxValue[]>
@@ -23,14 +24,12 @@ export class DataChartRowComponent implements OnInit {
   constructor() {
     this.vartChartData = {
       ...this.vartChartData,
-      chartSize: [100, 40],
       colorScheme: {
         domain: ['#040404']
       }
     }
     this.horizChartData = {
       ...this.horizChartData,
-      chartSize: [70, 40],
       showGridLines: false,
       barPadding: 0,
       groupPadding: 0,
@@ -47,7 +46,7 @@ export class DataChartRowComponent implements OnInit {
     const { title, vartData, horizData, amount, percentage } = this.data
     this.title = title;
     this.vartData = vartData;
-    this.horizData = horizData;
+    this.width = horizData + "px";
     this.amount = amount;
     this.percentage = percentage;
     this.isPercentagePositive = this.percentage > 0

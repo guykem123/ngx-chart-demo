@@ -1,14 +1,28 @@
 <div id="grid-view">
-  <app-card id="vert-bar">
-    <app-stacked-vert-bar-chart [chartData]='stackBarChartData' [data]="stackBarData"></app-stacked-vert-bar-chart>
-  </app-card>
-  <app-card id="horiz-bar">
-    <app-group-horiz-bar-chart [chartData]='groupBarChartData' [data]="groupBarData"></app-group-horiz-bar-chart>
-  </app-card>
-  <app-card id="area-chart">
-    <app-stacked-area-chart [chartData]='stackAreaChartData' [data]="stackAreaData"></app-stacked-area-chart>
-  </app-card>
-  <app-card id="multi-data-chart">
-    <app-multi-data-chart [chartsData]="chartsData"></app-multi-data-chart>
-  </app-card>
+  <div id="horiz-bar">
+    <div class="parent" #horizBar>
+      <app-group-horiz-bar-chart [canSelect]="true" [parent]="horizBar" [chartData]='groupBarChartData'
+        [data]="groupBarData">
+      </app-group-horiz-bar-chart>
+    </div>
+  </div>
+  <div id="area-chart">
+    <div class="parent" #areaChart>
+      <app-stacked-area-chart [canSelect]="true" [parent]="areaChart" [chartData]='stackAreaChartData'
+        [data]="stackAreaData">
+      </app-stacked-area-chart>
+    </div>
+  </div>
+
+  <div id="multi-data-chart">
+    <app-multi-data-chart [chartsData]="chartsData">
+    </app-multi-data-chart>
+  </div>
+  <div id="vert-bar">
+    <div class="parent" #vertBar>
+      <app-stacked-vert-bar-chart [canSelect]="true" [parent]="vertBar" [chartData]='stackBarChartData'
+        [data]="stackBarData">
+      </app-stacked-vert-bar-chart>
+    </div>
+  </div>
 </div>
