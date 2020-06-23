@@ -68,25 +68,32 @@ export class AppComponent {
       percentage: 7
     },
     {
-      title: "compute",
-      amount: 131571,
-      vartData: this.dataService.GetDataComputeVert(),
-      horizData: 89,
-      percentage: 7
-    },
-    {
-      title: "desktop",
+      title: "network",
       amount: 123571,
       vartData: this.dataService.GetDataDesktopVert(),
       horizData: 63,
       percentage: 10
     },
     {
-      title: "desktop",
+      title: "storage",
+      amount: 131571,
+      vartData: this.dataService.GetDataComputeVert(),
+      horizData: 89,
+      percentage: 7
+    },    
+    {
+      title: "database",
       amount: 154571,
       vartData: this.dataService.GetDataDesktopVert(),
       horizData: 36,
       percentage: -1
     },
+    {
+      title: "other",
+      amount: 54571,
+      vartData: this.dataService.GetDataDesktopVert(),
+      horizData: 56,
+      percentage: 5
+    },    
   ]
 }

@@ -18,7 +18,7 @@ export class DataService {
 
   data: NgxValue[] = [
     {
-      "name": "Burkina Faso",
+      "name": "Project A",
       "series": [
         {
           "name": "1990",
@@ -35,7 +35,7 @@ export class DataService {
       ]
     },
     {
-      "name": "Brazil",
+      "name": "Project C",
       "series": [
         {
           "name": "1990",
@@ -52,7 +52,7 @@ export class DataService {
       ]
     },
     {
-      "name": "Slovenia",
+      "name": "Project D",
       "series": [
         {
           "name": "1990",
@@ -69,7 +69,7 @@ export class DataService {
       ]
     },
     {
-      "name": "Burkina Faso1",
+      "name": "Project B",
       "series": [
         {
           "name": "1990",
@@ -86,7 +86,7 @@ export class DataService {
       ]
     },
     {
-      "name": "Brazil1",
+      "name": "Project E",
       "series": [
         {
           "name": "1990",
@@ -103,7 +103,7 @@ export class DataService {
       ]
     },
     {
-      "name": "Slovenia1",
+      "name": "Project F",
       "series": [
         {
           "name": "1990",

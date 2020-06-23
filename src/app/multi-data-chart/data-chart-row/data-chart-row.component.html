@@ -1,6 +1,6 @@
 <div id="grid-view">
-    <h6 id="title">
-        <span id="title-text">
+    <h6 class="title">
+        <span class="title-text">
             {{title}}
         </span>
     </h6>
@@ -14,8 +14,8 @@
         <div class="line" [style.width]="width">
         </div>
     </div>
-    <div id="amount">
-        <span id="amount-text">
+    <div class="amount">
+        <span class="amount-text">
             $ {{amount}}
             <span [ngClass]=" isPercentagePositive ? 'percentage-green' :'percentage-red'">
                 {{percentage}}%
