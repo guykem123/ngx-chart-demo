@@ -1,6 +1,7 @@
 #grid-view{
     display: grid;
     grid-template-columns: 20% 25% 20% 35%;
+    height: 100%;
     box-shadow: 0 2px 2px -2px gray;
 }
 .title{
@@ -30,19 +31,16 @@
 .percentage-red{
     color: red;
 }
-
-#horiz-bar{
-    width: 100px;
-    height: 50px;
+.vert-bar-parent{
+    height: 30%;
 }
 #vert-bar{
     width: 100px;
-    height: 50px;
+    height: 100%;
 }
 .line-of-progress{
     display: flex;
     align-content: center;
-
 }
 .line{
     height: 70%;

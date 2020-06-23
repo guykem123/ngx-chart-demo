@@ -4,8 +4,10 @@ html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 g.ng-star-inserted text.textDataLabel{
-    margin: 5px;
     text-anchor: end;
+    /* font-size: 9px; */
+    fill:white;
+    transform: translate(-5px);
 }
 
 
