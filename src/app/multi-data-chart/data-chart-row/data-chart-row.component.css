@@ -6,9 +6,10 @@
 }
 .title{
   text-align: center;
-  margin: auto;
+  display: flex;
 }
 .title-text{
+    align-self: center;
     display: inline-block;
     vertical-align: middle;
     line-height: normal;
@@ -17,13 +18,13 @@
 
 
 .amount{
-  text-align: center;
-  margin: auto;
+    display: flex;
+    text-align: center;
+    justify-content: center;
 }
 .amount-text{
-    display: inline-block;
-    vertical-align: middle;
-    line-height: normal;
+    align-self: center;
+    height: fit-content
 }
 .percentage-green{
     color: green;
@@ -31,12 +32,9 @@
 .percentage-red{
     color: red;
 }
-.vert-bar-parent{
-    height: 30%;
-}
 #vert-bar{
+    min-height: 30px;
     width: 100px;
-    height: 100%;
 }
 .line-of-progress{
     display: flex;

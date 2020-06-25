@@ -16,6 +16,7 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { CardComponent } from './card/card.component';
 import { MultiDataChartComponent } from './multi-data-chart/multi-data-chart.component';
 import { DataChartRowComponent } from './multi-data-chart/data-chart-row/data-chart-row.component';
+import { ScrollerListComponent } from './scroller-list/scroller-list.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { DataChartRowComponent } from './multi-data-chart/data-chart-row/data-ch
     StackedAreaChartComponent,
     CardComponent,
     MultiDataChartComponent,
-    DataChartRowComponent
+    DataChartRowComponent,
+    ScrollerListComponent
   ],
   imports: [
     BrowserModule,

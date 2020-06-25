@@ -3,9 +3,26 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
+
+.scroll-btn{
+    background-color: white;
+    border: unset;
+    margin: 10px;
+    border: 1px solid white;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+.scroll-btn:hover {
+    cursor: pointer;
+    border: 1px solid #ccc;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+
 g.ng-star-inserted text.textDataLabel{
     text-anchor: end;
-    /* font-size: 9px; */
+    font-size: 9px;
     fill:white;
     transform: translate(-5px);
 }

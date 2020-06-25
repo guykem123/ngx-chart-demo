@@ -1,0 +1,12 @@
+<div class="main-container">
+    <div class="scroll-container" #scrollContainer>
+        <div *ngFor="let item of scrollItems" class="scroll-item" (click)="onSelectItem(item)">
+            <div [style.background-color]="item.color"></div>
+            <span>{{item.name}}</span>
+        </div>
+    </div>
+
+    <i class="scroll-btn fas fa-angle-left" (mouseup)="mouseUpLeft()" (mousedown)="mouseDownLeft(scrollContainer)"></i>
+    <i class="scroll-btn fas fa-angle-right" (mouseup)="mouseUpRight()"
+        (mousedown)="mouseDownRight(scrollContainer)"></i>
+</div>

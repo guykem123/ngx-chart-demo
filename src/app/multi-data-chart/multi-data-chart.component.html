@@ -1,3 +1,5 @@
-<div>
-    <app-data-chart-row *ngFor="let data of chartsData" [data]="data"></app-data-chart-row>
+<div class="multi-content">
+    <div class="chart-data-display" *ngFor="let data of chartsData">
+        <app-data-chart-row [data]="data"></app-data-chart-row>
+    </div>
 </div>

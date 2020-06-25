@@ -1,13 +1,13 @@
 <div id="grid-view">
   <div id="horiz-bar">
-    <div class="parent" #horizBar>
+    <div class="chart-parent" #horizBar>
       <app-group-horiz-bar-chart [canSelect]="true" [parent]="horizBar" [chartData]='groupBarChartData'
         [data]="groupBarData">
       </app-group-horiz-bar-chart>
     </div>
   </div>
   <div id="area-chart">
-    <div class="parent" #areaChart>
+    <div class="chart-parent" #areaChart>
       <app-stacked-area-chart [canSelect]="true" [parent]="areaChart" [chartData]='stackAreaChartData'
         [data]="stackAreaData">
       </app-stacked-area-chart>
@@ -19,7 +19,7 @@
     </app-multi-data-chart>
   </div>
   <div id="vert-bar">
-    <div class="parent" #vertBar>
+    <div class="chart-parent" #vertBar>
       <app-stacked-vert-bar-chart [canSelect]="true" [parent]="vertBar" [chartData]='stackBarChartData'
         [data]="stackBarData">
       </app-stacked-vert-bar-chart>

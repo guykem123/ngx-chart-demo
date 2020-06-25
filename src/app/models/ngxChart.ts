@@ -1,7 +1,8 @@
 import { LegendPosition } from './legendPosition';
+import { ColorScheme } from './colorScheme';
 
 export interface NgxChart {
-    colorScheme: any,
+    colorScheme: ColorScheme,
     xAxis: boolean,
     yAxis: boolean,
     showLegend: boolean,
@@ -19,7 +20,7 @@ export interface NgxGroupBarChart {
 }
 
 export class NgxGroupBarChart implements NgxGroupBarChart, NgxChart {
-    colorScheme: any;
+    colorScheme: ColorScheme;
     legendPosition: LegendPosition;
     legendTitle: string;
     showGridLines: boolean;
@@ -50,7 +51,7 @@ export class NgxGroupBarChart implements NgxGroupBarChart, NgxChart {
 }
 
 export class NgxStackChart implements NgxChart {
-    colorScheme: any;
+    colorScheme: ColorScheme;
     legendPosition: LegendPosition;
     legendTitle: string;
     showGridLines: boolean;
@@ -73,7 +74,7 @@ export class NgxStackChart implements NgxChart {
 }
 
 export class NgxVerBarChart implements NgxChart {
-    colorScheme: any;
+    colorScheme: ColorScheme;
     legendPosition: LegendPosition;
     legendTitle: string;
     showGridLines: boolean;

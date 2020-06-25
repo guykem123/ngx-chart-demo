@@ -1,6 +1,13 @@
+
+//TODO -למצוא אופציה טובה יותר מלהקשיב ל event עושה הרבה בעיות 
 document.addEventListener("DOMContentLoaded", () => {
     setFontSize()
     window.onresize = setFontSize;
+    window.addEventListener("data-change", () => {
+        setTimeout(() => {
+            setFontSize()
+        }, 600);
+    })
 })
 
 function setFontSize() {
@@ -10,7 +17,7 @@ function setFontSize() {
     const dataLabels = document.querySelectorAll(".textDataLabel")
     for (let i = 0; i < dataLabels.length; i++) {
         const element = dataLabels[i]
-        element.style.fontSize = height - 5
-        console.log(height)
+        element.style.fontSize = height < 20 ? height -3 : 15
     }
 }
+

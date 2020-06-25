@@ -15,7 +15,6 @@ export class DataChartRowComponent implements OnInit {
   @Input() data: DataChart;
   title: string
   vartData: BehaviorSubject<NgxValue[]>
-  horizData: BehaviorSubject<NgxValue[]>
   amount: number
   percentage: number
   isPercentagePositive: boolean
